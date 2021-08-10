@@ -1,0 +1,211 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #ecf2f8;
+  font-family: 'Manrope', sans-serif;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  display: flex;
+  background-color: #ffffff;
+  width: 47rem ;
+  height: 18rem;
+  border-radius: 13px;
+  margin-top: 15rem;
+}
+
+/* Right Side of the Container  */
+
+.imageContainer{
+  background-image: url("images/drawers.jpg") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 40%;
+  height: 100%;
+  border-bottom-left-radius: 13px;
+  border-top-left-radius: 13px;
+}
+
+/* Left Side of the container  */
+
+.textContainer{
+  padding: 2rem 3rem ;
+  width: 60%;
+}
+
+.textHeading{
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.textMain{
+  font-size: 13px;
+  color: hsl(214, 17%, 51%);
+  margin-bottom: 1.5rem ;
+  line-height: 1.6;
+}
+
+.cardFooter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.profile{
+  display: flex;
+}
+
+.userImage{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem ;
+}
+
+.userData{
+  color: hsl(217, 19%, 35%);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.userData span{
+  color: hsl(214, 17%, 51%);
+  font-weight: 500;
+}
+
+.share{
+  background-color: hsl(210, 46%, 95%);
+  color: hsl(214, 17%, 51%);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Class that will be activated when we click on button  */
+
+.shareClicked{
+  background-color: hsl(214, 17%, 51%);
+  color: hsl(210, 46%, 95%);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+/* The Popping Box */
+
+.shareBox{
+  position: absolute;
+  background-color: hsl(217, 19%, 35%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  width: 16rem; 
+  letter-spacing: 5px;
+  font-size: 0.7rem;
+  color: hsl(212, 23%, 69%);
+  visibility: hidden;
+  top: -70px;
+  left: 210px;
+}
+
+.shareBox > a:hover{
+  opacity: 0.7;
+}
+
+.arrow{
+  background-color: hsl(217, 19%, 35%);
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 330px;
+  top: -30px;
+  visibility: hidden;
+}
+
+.visibility{
+  visibility: visible;
+}
+
+
+/* Mobile Version  */
+
+@media (max-width: 400px){
+  .container{
+    flex-direction: column;
+    width: 90%;
+    height: 37rem;
+    margin-top: 4rem ;
+  }
+
+  .imageContainer{
+    width: 100%;
+    height: 18rem ;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 13px;
+    background-size: contain;
+  }
+
+
+  .textContainer{
+    width: 100%;
+    padding: 1.5rem 1.5rem 0;
+  }
+
+  .profile{
+    margin-top: 0.5rem;
+  }
+
+  .textHeading{
+    font-size: 1.15rem;
+  }
+
+  .textMain{
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 2.5rem ;
+  }  
+
+  .arrow{
+    display: none;
+  }
+
+  .shareBox{
+
+    justify-content: start;
+    width: 116.4%; 
+    letter-spacing: 5px;
+    color: hsl(212, 23%, 69%);
+    /* visibility: hidden; */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    left: -1.5rem;
+    bottom: -1.09rem;
+    top: -0.7rem;
+  }
+
+  .shareBox > a{
+    margin: 0.5rem;
+  }
+}
